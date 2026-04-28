@@ -5,9 +5,7 @@ def is_prime(num):
     #checks if num divides any number until sqrt(num).
     for i in range(2, int(num ** 0.5) + 1):
         if num % i == 0:
-            print(f"❌ {num} is not a prime number.")
             return False
-    print(f"✅ {num} is a prime number.")
     return True
 
 # Returns primes up until the limit
@@ -23,7 +21,7 @@ def sieve_of_erastothenes(limit):
                 number_list[multiple] = False
 
     list_of_primes = [i for i in range(limit) if number_list[i]]
-    print(f"List of primes below {limit}: {list_of_primes}")
+    return list_of_primes
 
 
 # Returns list of prime factors for 'num'
