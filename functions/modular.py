@@ -7,6 +7,7 @@ def gcd(num1, num2):
     return num2
 
 def extended_gcd(num1, num2):
+    # Extended Euclidean Algorithm
     if num2 == 0:
         return num1, 1, 0
     gcd, x, y = extended_gcd(num2, num1 % num2)
